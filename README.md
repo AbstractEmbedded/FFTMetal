@@ -1,5 +1,4 @@
 # FFTMetal
-iOS Project Demonstrating Tukey-Cooley FFT in a Metal GPGPU Processing Pipeline
 
 This project demonstrates:
 
