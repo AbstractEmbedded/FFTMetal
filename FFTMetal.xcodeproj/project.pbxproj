@@ -1,0 +1,542 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C7D27187201A475B0021303C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D27186201A475B0021303C /* ViewController.m */; };
+		D32AD5771C1BCE01007A9820 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D32AD5761C1BCE01007A9820 /* main.m */; };
+		D32AD57A1C1BCE01007A9820 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D32AD5791C1BCE01007A9820 /* AppDelegate.m */; };
+		D32AD5831C1BCE01007A9820 /* FFTMetal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D32AD5811C1BCE01007A9820 /* FFTMetal.xcdatamodeld */; };
+		D32AD5851C1BCE01007A9820 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D32AD5841C1BCE01007A9820 /* Assets.xcassets */; };
+		D32AD5881C1BCE01007A9820 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D32AD5861C1BCE01007A9820 /* LaunchScreen.storyboard */; };
+		D32AD5901C1BCE60007A9820 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D32AD58F1C1BCE60007A9820 /* Metal.framework */; };
+		D32AD5921C1BCE67007A9820 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D32AD5911C1BCE67007A9820 /* QuartzCore.framework */; };
+		D32AD5AC1C1BE761007A9820 /* LiveCameraViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D32AD5AA1C1BE761007A9820 /* LiveCameraViewController.mm */; };
+		D32AD5AF1C1BEAD1007A9820 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D32AD5AE1C1BEAD1007A9820 /* AssetsLibrary.framework */; };
+		D32AD5B11C1BEAD6007A9820 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D32AD5B01C1BEAD6007A9820 /* CoreMedia.framework */; };
+		D32AD5B31C1BEADD007A9820 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D32AD5B21C1BEADD007A9820 /* AVFoundation.framework */; };
+		D32AD5C41C1D6E07007A9820 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D32AD5C31C1D6E07007A9820 /* CoreGraphics.framework */; };
+		D355EA281C2CECF500A67F20 /* UINavigationController+Autorotation.m in Sources */ = {isa = PBXBuildFile; fileRef = D355EA271C2CECF500A67F20 /* UINavigationController+Autorotation.m */; };
+		D3567D661C227C210078BB4D /* FFT.metal in Sources */ = {isa = PBXBuildFile; fileRef = D3567D651C227C210078BB4D /* FFT.metal */; };
+		D3567D691C22A9710078BB4D /* MetalFFTImageFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = D3567D681C22A9710078BB4D /* MetalFFTImageFilter.m */; };
+		D3D23D2A1C1E817400F71410 /* MetalGaussianBlurFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D23D131C1E817400F71410 /* MetalGaussianBlurFilter.m */; };
+		D3D23D2B1C1E817400F71410 /* MetalImageFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D23D151C1E817400F71410 /* MetalImageFilter.m */; };
+		D3D23D2C1C1E817400F71410 /* MetalSaturationImageFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D23D171C1E817400F71410 /* MetalSaturationImageFilter.m */; };
+		D3D23D2D1C1E817400F71410 /* MetalGPGPUContext.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D23D191C1E817400F71410 /* MetalGPGPUContext.m */; };
+		D3D23D2E1C1E817400F71410 /* MetalImageOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D23D1B1C1E817400F71410 /* MetalImageOutput.m */; };
+		D3D23D2F1C1E817400F71410 /* UIImage+MetalTextureUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D23D1F1C1E817400F71410 /* UIImage+MetalTextureUtilities.m */; };
+		D3D23D301C1E817400F71410 /* SIMDMatrixMath.mm in Sources */ = {isa = PBXBuildFile; fileRef = D3D23D221C1E817400F71410 /* SIMDMatrixMath.mm */; };
+		D3D23D311C1E817400F71410 /* MetalPVRTexture.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D23D271C1E817400F71410 /* MetalPVRTexture.m */; };
+		D3D23D321C1E817400F71410 /* AbstractMetalTexture.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D23D291C1E817400F71410 /* AbstractMetalTexture.m */; };
+		D3D23D351C1E84A300F71410 /* MetalRenderView.mm in Sources */ = {isa = PBXBuildFile; fileRef = D3D23D341C1E84A300F71410 /* MetalRenderView.mm */; };
+		D3D23D3E1C1E931200F71410 /* ImageFilterShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = D3D23D3D1C1E931200F71410 /* ImageFilterShaders.metal */; };
+		D3D23D401C1E936A00F71410 /* RenderShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = D3D23D3F1C1E936A00F71410 /* RenderShaders.metal */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C7B7B2C21DECE034009F3B97 /* MetalSharedTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MetalSharedTypes.h; sourceTree = "<group>"; };
+		C7D27185201A475B0021303C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C7D27186201A475B0021303C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D32AD5721C1BCE01007A9820 /* FFTMetal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FFTMetal.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D32AD5761C1BCE01007A9820 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D32AD5781C1BCE01007A9820 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D32AD5791C1BCE01007A9820 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D32AD5821C1BCE01007A9820 /* FFTMetal.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FFTMetal.xcdatamodel; sourceTree = "<group>"; };
+		D32AD5841C1BCE01007A9820 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D32AD5871C1BCE01007A9820 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D32AD5891C1BCE01007A9820 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D32AD58F1C1BCE60007A9820 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		D32AD5911C1BCE67007A9820 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D32AD5A91C1BE761007A9820 /* LiveCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveCameraViewController.h; sourceTree = "<group>"; };
+		D32AD5AA1C1BE761007A9820 /* LiveCameraViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LiveCameraViewController.mm; sourceTree = "<group>"; };
+		D32AD5AD1C1BE8EC007A9820 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = FFTMetal/PrefixHeader.pch; sourceTree = "<group>"; };
+		D32AD5AE1C1BEAD1007A9820 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		D32AD5B01C1BEAD6007A9820 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		D32AD5B21C1BEADD007A9820 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		D32AD5C31C1D6E07007A9820 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D355EA261C2CECF500A67F20 /* UINavigationController+Autorotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+Autorotation.h"; sourceTree = "<group>"; };
+		D355EA271C2CECF500A67F20 /* UINavigationController+Autorotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Autorotation.m"; sourceTree = "<group>"; };
+		D3567D651C227C210078BB4D /* FFT.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = FFT.metal; sourceTree = "<group>"; };
+		D3567D671C22A9710078BB4D /* MetalFFTImageFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MetalFFTImageFilter.h; sourceTree = "<group>"; };
+		D3567D681C22A9710078BB4D /* MetalFFTImageFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MetalFFTImageFilter.m; sourceTree = "<group>"; };
+		D3567D6B1C22B62D0078BB4D /* FFTMath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FFTMath.h; path = FFTMetal/Metal/Math/FFTMath.h; sourceTree = SOURCE_ROOT; };
+		D3D23D121C1E817400F71410 /* MetalGaussianBlurFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MetalGaussianBlurFilter.h; sourceTree = "<group>"; };
+		D3D23D131C1E817400F71410 /* MetalGaussianBlurFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MetalGaussianBlurFilter.m; sourceTree = "<group>"; };
+		D3D23D141C1E817400F71410 /* MetalImageFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MetalImageFilter.h; sourceTree = "<group>"; };
+		D3D23D151C1E817400F71410 /* MetalImageFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MetalImageFilter.m; sourceTree = "<group>"; };
+		D3D23D161C1E817400F71410 /* MetalSaturationImageFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MetalSaturationImageFilter.h; sourceTree = "<group>"; };
+		D3D23D171C1E817400F71410 /* MetalSaturationImageFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MetalSaturationImageFilter.m; sourceTree = "<group>"; };
+		D3D23D181C1E817400F71410 /* MetalGPGPUContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MetalGPGPUContext.h; sourceTree = "<group>"; };
+		D3D23D191C1E817400F71410 /* MetalGPGPUContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MetalGPGPUContext.m; sourceTree = "<group>"; };
+		D3D23D1A1C1E817400F71410 /* MetalImageOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MetalImageOutput.h; sourceTree = "<group>"; };
+		D3D23D1B1C1E817400F71410 /* MetalImageOutput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MetalImageOutput.m; sourceTree = "<group>"; };
+		D3D23D1C1C1E817400F71410 /* MetalTextureConsumer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MetalTextureConsumer.h; sourceTree = "<group>"; };
+		D3D23D1D1C1E817400F71410 /* MetalTextureProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MetalTextureProvider.h; sourceTree = "<group>"; };
+		D3D23D1E1C1E817400F71410 /* UIImage+MetalTextureUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MetalTextureUtilities.h"; sourceTree = "<group>"; };
+		D3D23D1F1C1E817400F71410 /* UIImage+MetalTextureUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MetalTextureUtilities.m"; sourceTree = "<group>"; };
+		D3D23D211C1E817400F71410 /* SIMDMatrixMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIMDMatrixMath.h; sourceTree = "<group>"; };
+		D3D23D221C1E817400F71410 /* SIMDMatrixMath.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SIMDMatrixMath.mm; sourceTree = "<group>"; };
+		D3D23D261C1E817400F71410 /* MetalPVRTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MetalPVRTexture.h; sourceTree = "<group>"; };
+		D3D23D271C1E817400F71410 /* MetalPVRTexture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MetalPVRTexture.m; sourceTree = "<group>"; };
+		D3D23D281C1E817400F71410 /* AbstractMetalTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractMetalTexture.h; sourceTree = "<group>"; };
+		D3D23D291C1E817400F71410 /* AbstractMetalTexture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractMetalTexture.m; sourceTree = "<group>"; };
+		D3D23D331C1E84A300F71410 /* MetalRenderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MetalRenderView.h; sourceTree = "<group>"; };
+		D3D23D341C1E84A300F71410 /* MetalRenderView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MetalRenderView.mm; sourceTree = "<group>"; };
+		D3D23D3D1C1E931200F71410 /* ImageFilterShaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = ImageFilterShaders.metal; sourceTree = "<group>"; };
+		D3D23D3F1C1E936A00F71410 /* RenderShaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = RenderShaders.metal; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D32AD56F1C1BCE01007A9820 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D32AD5C41C1D6E07007A9820 /* CoreGraphics.framework in Frameworks */,
+				D32AD5B31C1BEADD007A9820 /* AVFoundation.framework in Frameworks */,
+				D32AD5B11C1BEAD6007A9820 /* CoreMedia.framework in Frameworks */,
+				D32AD5AF1C1BEAD1007A9820 /* AssetsLibrary.framework in Frameworks */,
+				D32AD5921C1BCE67007A9820 /* QuartzCore.framework in Frameworks */,
+				D32AD5901C1BCE60007A9820 /* Metal.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D32AD5691C1BCE01007A9820 = {
+			isa = PBXGroup;
+			children = (
+				D32AD5AD1C1BE8EC007A9820 /* PrefixHeader.pch */,
+				D3DCBDF11C1EB5F400FE3C91 /* Resources */,
+				D32AD5741C1BCE01007A9820 /* FFTMetal */,
+				D32AD5731C1BCE01007A9820 /* Products */,
+				D32AD5931C1BCE9C007A9820 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D32AD5731C1BCE01007A9820 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D32AD5721C1BCE01007A9820 /* FFTMetal.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D32AD5741C1BCE01007A9820 /* FFTMetal */ = {
+			isa = PBXGroup;
+			children = (
+				D32AD5781C1BCE01007A9820 /* AppDelegate.h */,
+				D32AD5791C1BCE01007A9820 /* AppDelegate.m */,
+				C7D27185201A475B0021303C /* ViewController.h */,
+				C7D27186201A475B0021303C /* ViewController.m */,
+				D32AD5A61C1BE761007A9820 /* LiveCamera */,
+				D3D23D0F1C1E817400F71410 /* Metal */,
+				D32AD5751C1BCE01007A9820 /* Supporting Files */,
+			);
+			path = FFTMetal;
+			sourceTree = "<group>";
+		};
+		D32AD5751C1BCE01007A9820 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D32AD5761C1BCE01007A9820 /* main.m */,
+				D32AD5841C1BCE01007A9820 /* Assets.xcassets */,
+				D32AD5861C1BCE01007A9820 /* LaunchScreen.storyboard */,
+				D32AD5891C1BCE01007A9820 /* Info.plist */,
+				D32AD5811C1BCE01007A9820 /* FFTMetal.xcdatamodeld */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D32AD5931C1BCE9C007A9820 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D32AD5C31C1D6E07007A9820 /* CoreGraphics.framework */,
+				D32AD5B21C1BEADD007A9820 /* AVFoundation.framework */,
+				D32AD5B01C1BEAD6007A9820 /* CoreMedia.framework */,
+				D32AD5AE1C1BEAD1007A9820 /* AssetsLibrary.framework */,
+				D32AD5911C1BCE67007A9820 /* QuartzCore.framework */,
+				D32AD58F1C1BCE60007A9820 /* Metal.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D32AD5A61C1BE761007A9820 /* LiveCamera */ = {
+			isa = PBXGroup;
+			children = (
+				D355EA261C2CECF500A67F20 /* UINavigationController+Autorotation.h */,
+				D355EA271C2CECF500A67F20 /* UINavigationController+Autorotation.m */,
+				D32AD5A91C1BE761007A9820 /* LiveCameraViewController.h */,
+				D32AD5AA1C1BE761007A9820 /* LiveCameraViewController.mm */,
+			);
+			path = LiveCamera;
+			sourceTree = "<group>";
+		};
+		D3567D6C1C22BB7B0078BB4D /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				D3567D651C227C210078BB4D /* FFT.metal */,
+				D3D23D3D1C1E931200F71410 /* ImageFilterShaders.metal */,
+			);
+			name = Shaders;
+			sourceTree = "<group>";
+		};
+		D3D23D0F1C1E817400F71410 /* Metal */ = {
+			isa = PBXGroup;
+			children = (
+				D3D23D201C1E817400F71410 /* Math */,
+				D3D23D101C1E817400F71410 /* ImageProcessing */,
+				D3D23D231C1E817400F71410 /* Rendering */,
+			);
+			path = Metal;
+			sourceTree = "<group>";
+		};
+		D3D23D101C1E817400F71410 /* ImageProcessing */ = {
+			isa = PBXGroup;
+			children = (
+				D3D23D111C1E817400F71410 /* Filters */,
+				D3D23D181C1E817400F71410 /* MetalGPGPUContext.h */,
+				D3D23D191C1E817400F71410 /* MetalGPGPUContext.m */,
+				D3D23D1A1C1E817400F71410 /* MetalImageOutput.h */,
+				D3D23D1B1C1E817400F71410 /* MetalImageOutput.m */,
+				D3D23D1C1C1E817400F71410 /* MetalTextureConsumer.h */,
+				D3D23D1D1C1E817400F71410 /* MetalTextureProvider.h */,
+				D3D23D1E1C1E817400F71410 /* UIImage+MetalTextureUtilities.h */,
+				D3D23D1F1C1E817400F71410 /* UIImage+MetalTextureUtilities.m */,
+			);
+			path = ImageProcessing;
+			sourceTree = "<group>";
+		};
+		D3D23D111C1E817400F71410 /* Filters */ = {
+			isa = PBXGroup;
+			children = (
+				D3D23D141C1E817400F71410 /* MetalImageFilter.h */,
+				D3D23D151C1E817400F71410 /* MetalImageFilter.m */,
+				D3D23D121C1E817400F71410 /* MetalGaussianBlurFilter.h */,
+				D3D23D131C1E817400F71410 /* MetalGaussianBlurFilter.m */,
+				D3D23D161C1E817400F71410 /* MetalSaturationImageFilter.h */,
+				D3D23D171C1E817400F71410 /* MetalSaturationImageFilter.m */,
+				D3567D671C22A9710078BB4D /* MetalFFTImageFilter.h */,
+				D3567D681C22A9710078BB4D /* MetalFFTImageFilter.m */,
+				D3567D6C1C22BB7B0078BB4D /* Shaders */,
+			);
+			path = Filters;
+			sourceTree = "<group>";
+		};
+		D3D23D201C1E817400F71410 /* Math */ = {
+			isa = PBXGroup;
+			children = (
+				D3567D6B1C22B62D0078BB4D /* FFTMath.h */,
+				D3D23D211C1E817400F71410 /* SIMDMatrixMath.h */,
+				D3D23D221C1E817400F71410 /* SIMDMatrixMath.mm */,
+			);
+			path = Math;
+			sourceTree = "<group>";
+		};
+		D3D23D231C1E817400F71410 /* Rendering */ = {
+			isa = PBXGroup;
+			children = (
+				D3D23D331C1E84A300F71410 /* MetalRenderView.h */,
+				D3D23D341C1E84A300F71410 /* MetalRenderView.mm */,
+				D3D23D361C1E8FDD00F71410 /* Shaders */,
+				D3D23D251C1E817400F71410 /* TextureLoader */,
+			);
+			path = Rendering;
+			sourceTree = "<group>";
+		};
+		D3D23D251C1E817400F71410 /* TextureLoader */ = {
+			isa = PBXGroup;
+			children = (
+				D3D23D261C1E817400F71410 /* MetalPVRTexture.h */,
+				D3D23D271C1E817400F71410 /* MetalPVRTexture.m */,
+				D3D23D281C1E817400F71410 /* AbstractMetalTexture.h */,
+				D3D23D291C1E817400F71410 /* AbstractMetalTexture.m */,
+			);
+			path = TextureLoader;
+			sourceTree = "<group>";
+		};
+		D3D23D361C1E8FDD00F71410 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				C7B7B2C21DECE034009F3B97 /* MetalSharedTypes.h */,
+				D3D23D3F1C1E936A00F71410 /* RenderShaders.metal */,
+			);
+			path = Shaders;
+			sourceTree = "<group>";
+		};
+		D3DCBDF11C1EB5F400FE3C91 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D32AD5711C1BCE01007A9820 /* FFTMetal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D32AD58C1C1BCE01007A9820 /* Build configuration list for PBXNativeTarget "FFTMetal" */;
+			buildPhases = (
+				D32AD56E1C1BCE01007A9820 /* Sources */,
+				D32AD56F1C1BCE01007A9820 /* Frameworks */,
+				D32AD5701C1BCE01007A9820 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FFTMetal;
+			productName = FFTMetal;
+			productReference = D32AD5721C1BCE01007A9820 /* FFTMetal.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D32AD56A1C1BCE01007A9820 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Abstract Embedded";
+				TargetAttributes = {
+					D32AD5711C1BCE01007A9820 = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = ECP6D49SS3;
+					};
+				};
+			};
+			buildConfigurationList = D32AD56D1C1BCE01007A9820 /* Build configuration list for PBXProject "FFTMetal" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D32AD5691C1BCE01007A9820;
+			productRefGroup = D32AD5731C1BCE01007A9820 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D32AD5711C1BCE01007A9820 /* FFTMetal */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D32AD5701C1BCE01007A9820 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D32AD5881C1BCE01007A9820 /* LaunchScreen.storyboard in Resources */,
+				D32AD5851C1BCE01007A9820 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D32AD56E1C1BCE01007A9820 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3D23D321C1E817400F71410 /* AbstractMetalTexture.m in Sources */,
+				D3D23D2A1C1E817400F71410 /* MetalGaussianBlurFilter.m in Sources */,
+				D3D23D2B1C1E817400F71410 /* MetalImageFilter.m in Sources */,
+				D3567D661C227C210078BB4D /* FFT.metal in Sources */,
+				D3D23D301C1E817400F71410 /* SIMDMatrixMath.mm in Sources */,
+				D3D23D2E1C1E817400F71410 /* MetalImageOutput.m in Sources */,
+				D3567D691C22A9710078BB4D /* MetalFFTImageFilter.m in Sources */,
+				D3D23D2D1C1E817400F71410 /* MetalGPGPUContext.m in Sources */,
+				D32AD5831C1BCE01007A9820 /* FFTMetal.xcdatamodeld in Sources */,
+				D355EA281C2CECF500A67F20 /* UINavigationController+Autorotation.m in Sources */,
+				D3D23D351C1E84A300F71410 /* MetalRenderView.mm in Sources */,
+				D32AD57A1C1BCE01007A9820 /* AppDelegate.m in Sources */,
+				D3D23D2C1C1E817400F71410 /* MetalSaturationImageFilter.m in Sources */,
+				D32AD5771C1BCE01007A9820 /* main.m in Sources */,
+				C7D27187201A475B0021303C /* ViewController.m in Sources */,
+				D3D23D2F1C1E817400F71410 /* UIImage+MetalTextureUtilities.m in Sources */,
+				D3D23D311C1E817400F71410 /* MetalPVRTexture.m in Sources */,
+				D32AD5AC1C1BE761007A9820 /* LiveCameraViewController.mm in Sources */,
+				D3D23D401C1E936A00F71410 /* RenderShaders.metal in Sources */,
+				D3D23D3E1C1E931200F71410 /* ImageFilterShaders.metal in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D32AD5861C1BCE01007A9820 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D32AD5871C1BCE01007A9820 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D32AD58A1C1BCE01007A9820 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D32AD58B1C1BCE01007A9820 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D32AD58D1C1BCE01007A9820 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = ECP6D49SS3;
+				FRAMEWORK_SEARCH_PATHS = "/Users/MACmaster/Development/3rdPartyLibs/OpenCV/ios-opencv3-bitcode-libc++";
+				GCC_PREFIX_HEADER = FFTMetal/PrefixHeader.pch;
+				HEADER_SEARCH_PATHS = /Users/MACmaster/Development/Products/FFTMetal/iOS/FFTMetal/FFTMetal/Metal/Rendering;
+				INFOPLIST_FILE = FFTMetal/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_HEADER_SEARCH_PATHS = /Users/MACmaster/Development/Products/FFTMetal/iOS/FFTMetal/FFTMetal/Metal/Rendering;
+				PRODUCT_BUNDLE_IDENTIFIER = com.abstractembedded.fftmetal.FFTMetal;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D32AD58E1C1BCE01007A9820 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = ECP6D49SS3;
+				FRAMEWORK_SEARCH_PATHS = "/Users/MACmaster/Development/3rdPartyLibs/OpenCV/ios-opencv3-bitcode-libc++";
+				GCC_PREFIX_HEADER = FFTMetal/PrefixHeader.pch;
+				HEADER_SEARCH_PATHS = /Users/MACmaster/Development/Products/FFTMetal/iOS/FFTMetal/FFTMetal/Metal/Rendering;
+				INFOPLIST_FILE = FFTMetal/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_HEADER_SEARCH_PATHS = /Users/MACmaster/Development/Products/FFTMetal/iOS/FFTMetal/FFTMetal/Metal/Rendering;
+				PRODUCT_BUNDLE_IDENTIFIER = com.abstractembedded.fftmetal.FFTMetal;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D32AD56D1C1BCE01007A9820 /* Build configuration list for PBXProject "FFTMetal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D32AD58A1C1BCE01007A9820 /* Debug */,
+				D32AD58B1C1BCE01007A9820 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D32AD58C1C1BCE01007A9820 /* Build configuration list for PBXNativeTarget "FFTMetal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D32AD58D1C1BCE01007A9820 /* Debug */,
+				D32AD58E1C1BCE01007A9820 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D32AD5811C1BCE01007A9820 /* FFTMetal.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D32AD5821C1BCE01007A9820 /* FFTMetal.xcdatamodel */,
+			);
+			currentVersion = D32AD5821C1BCE01007A9820 /* FFTMetal.xcdatamodel */;
+			path = FFTMetal.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D32AD56A1C1BCE01007A9820 /* Project object */;
+}

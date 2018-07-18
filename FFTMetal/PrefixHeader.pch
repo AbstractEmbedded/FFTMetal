@@ -1,0 +1,101 @@
+//
+//  PrefixHeader.pch
+//  FFTMetal
+//
+//  Created by MACMaster on 12/12/15.
+//  Copyright © 2015 Abstract Embedded. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+/*
+ *  Darwin (BSD) Kernel and C-Level includes/defintions
+ *  IMPORTANT:  Make sure all imports/includes occur within the ifdef!
+ */
+#include <libkern/OSAtomic.h>
+#include "mach/mach_time.h"
+
+
+/*
+ *  Define some global static c functions for measuring latencies with as much accuracy as possible at the ms level
+ *  you can put this is another header if you want
+ */
+static double machGetClockS()
+{
+    static bool mach_init = 0 ;
+    static mach_timebase_info_data_t tbInfo ;
+    static double conversionFactor ;
+    if(!mach_init)
+    {
+        mach_init = 1 ;
+        // get the time base
+        mach_timebase_info( &tbInfo ) ;
+        conversionFactor = tbInfo.numer / (1e6*tbInfo.denom) ; // ns->ms
+    }
+    
+    return mach_absolute_time() * conversionFactor ; // seconds
+}
+
+//I never use this one, so i'll comment it out to suppress the warning that it is unused
+/*
+ static double machGetClockDiffS()
+ {
+ static double lastTime = 0;
+ 
+ double currentTime = machGetClockS() ;
+ 
+ double diff = currentTime - lastTime ;
+ 
+ lastTime = currentTime ; // update for next call
+ 
+ return diff ; // that's your answer
+ }
+ */
+
+
+/*
+ *  C++ Defines
+ *  IMPORTANT:  Make sure all imports/includes occur within the ifdef!
+ */
+#ifdef __cplusplus
+//#import <opencv2/opencv.hpp>
+//#import <opencv2/highgui/ios.h>
+//#import <opencv2/imgproc/imgproc.hpp>
+#include "MetalSharedTypes.h"
+#endif /* End C++ Defines */
+
+/*
+ *  Objective-C Defines
+ */
+#ifdef __OBJC__
+
+/*
+ *  System Versioning Preprocessor Macros
+ */
+
+#define SYSTEM_VERSION_EQUAL_TO(v)                  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedSame)
+#define SYSTEM_VERSION_GREATER_THAN(v)              ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedDescending)
+#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
+#define SYSTEM_VERSION_LESS_THAN(v)                 ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
+#define SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(v)     ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedDescending)
+
+/*
+ *  Objective-c static definitions
+ */
+
+
+/*
+ *  Import obj-c headers
+ */
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <CoreImage/CoreImage.h>
+
+static const double kCameraToolBarHeight = 44.0;
+static CGFloat DegreesToRadians(CGFloat degrees) {return degrees * M_PI / 180;};
+
+#endif /* End Obj-C Defines */
+
+#endif /* End PrefixHeader_pch */
+
